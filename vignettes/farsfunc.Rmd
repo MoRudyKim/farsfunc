@@ -1,0 +1,17 @@
+---
+title: "Fatality Accident Reporting System Functions"
+author: "Coursera Student"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk(collapse = TRUE, comment = "#>")
+```
+
+# Fatality Accident Reporting System Functions
+

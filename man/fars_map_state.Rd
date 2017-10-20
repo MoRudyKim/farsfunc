@@ -2,12 +2,12 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_map_state}
 \alias{fars_map_state}
-\title{Fatality Accident Reporting System (FARS) Mapping Function}
+\title{Fatality Accident Reporting System--Mapping Function}
 \usage{
 fars_map_state(state.num, year)
 }
 \description{
-\code {fars_map_state} takes in the data from the FARS files and maps the
+\code{fars_map_state} takes in the data from the FARS files and maps the
  number of incidents for the specified state for the given year. This function uses
  make_filename and fars_read functions. It also requires *dplyr*, *maps*, and *graphics*
  packages to use filter, map, and points functions, respectively.
@@ -18,7 +18,7 @@ fars_map_state(state.num, year)
  @importFrom graphics points
  @importFrom magrittr %>%
 
-@param state.num (numeric, state.num, year) state.num is an integer value that represents
+@param state.num (numeric, state.num) state.num is an integer value that represents
  a spefic state and the year is the year of interest in mapping the incidents.
  state.num value in the FARS range from 1 to 56. Integer value outside this
  range will result in an error.
@@ -30,8 +30,7 @@ fars_map_state(state.num, year)
 @examples \dontrun {
  fars_map_state(1, 2013)
  fars_map_state(20, 2014)
- fars_map)state(90, year) ## parameter out-of-range or invalide parameter will
- throw an error.
+ fars_map_state(90, year)
  }
  @export
 }

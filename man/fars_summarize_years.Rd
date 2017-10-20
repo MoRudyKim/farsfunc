@@ -7,7 +7,7 @@
 fars_summarize_years(years)
 }
 \description{
-\code {fars_summarize_years} takes the year or years in as a parameter and
+\code{fars_summarize_years} takes the year or years in as a parameter and
  creates a dplyr style table (tibble) that counts the number of incidents
  per month for the given year. This function uses fars_read_years function
  as well as group_by and summarize functions from *dplyr* package. Additionally,

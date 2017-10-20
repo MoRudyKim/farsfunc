@@ -56,7 +56,7 @@ make_filename <- function(year) {
 
 #' Support Function
 #'
-#' \code {fars_read_years} is a support function that creates list(s) of month-
+#' \code{fars_read_years} is a support function that creates list(s) of month-
 #'  year based on the parameters passed into the function. This function uses *make_filename*
 #'  function as well as mutate and select functions from the dplyr package.
 #'
@@ -90,7 +90,7 @@ fars_read_years <- function(years) {
 
 #' Count Incidents per Month per Year
 #'
-#' \code {fars_summarize_years} takes the year or years in as a parameter and
+#' \code{fars_summarize_years} takes the year or years in as a parameter and
 #'  creates a dplyr style table (tibble) that counts the number of incidents
 #'  per month for the given year. This function uses fars_read_years function
 #'  as well as group_by and summarize functions from *dplyr* package. Additionally,
@@ -119,9 +119,9 @@ fars_summarize_years <- function(years) {
                 tidyr::spread(year, n)
 }
 
-#' Fatality Accident Reporting System (FARS) Mapping Function
+#' Fatality Accident Reporting System--Mapping Function
 #'
-#' \code {fars_map_state} takes in the data from the FARS files and maps the
+#' \code{fars_map_state} takes in the data from the FARS files and maps the
 #'  number of incidents for the specified state for the given year. This function uses
 #'  make_filename and fars_read functions. It also requires *dplyr*, *maps*, and *graphics*
 #'  packages to use filter, map, and points functions, respectively.
@@ -131,7 +131,7 @@ fars_summarize_years <- function(years) {
 #'  @importFrom graphics points
 #'  @importFrom magrittr %>%
 #'
-#'  @param state.num (numeric, state.num, year) state.num is an integer value that represents
+#'  @param state.num (numeric, state.num) state.num is an integer value that represents
 #'  a spefic state and the year is the year of interest in mapping the incidents.
 #'  state.num value in the FARS range from 1 to 56. Integer value outside this
 #'  range will result in an error.
@@ -143,8 +143,7 @@ fars_summarize_years <- function(years) {
 #'  @examples \dontrun {
 #'  fars_map_state(1, 2013)
 #'  fars_map_state(20, 2014)
-#'  fars_map)state(90, year) ## parameter out-of-range or invalide parameter will
-#'  throw an error.
+#'  fars_map_state(90, year)
 #'  }
 #'  @export
 fars_map_state <- function(state.num, year) {

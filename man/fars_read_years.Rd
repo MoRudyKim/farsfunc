@@ -7,7 +7,7 @@
 fars_read_years(years)
 }
 \description{
-\code {fars_read_years} is a support function that creates list(s) of month-
+\code{fars_read_years} is a support function that creates list(s) of month-
  year based on the parameters passed into the function. This function uses *make_filename*
  function as well as mutate and select functions from the dplyr package.
 }

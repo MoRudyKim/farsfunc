@@ -29,3 +29,8 @@ fars_map_state(state.num, year)
  make_filename and fars_read functions. It also requires *dplyr*, *maps*, and *graphics*
  packages to use filter, map, and points functions, respectively.
 }
+\details{
+@importFrom dplyr filter
+ @importFrom maps map
+ @importFrom graphics points
+}

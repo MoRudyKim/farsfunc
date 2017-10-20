@@ -21,6 +21,10 @@ function will return the number of incidents per month for the
  as well as group_by and summarize functions from *dplyr* package. Additionally,
  function requires tidyr pacakge to utilize spread function.
 }
+\details{
+@importFrom dplyr group_by summarize
+ @importFrom tidyr spread
+}
 \examples{
 \dontrun {
  fars_summarize_years(2013)

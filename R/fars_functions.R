@@ -4,8 +4,8 @@
 #'  supplied in the parameter), reads the file, and loads the file as a data frame
 #'  and S3 class "tbl_df" from dplyr package.
 #'
-#'  @importFrom (dplyr, tbl_df)
-#'  @importFrom (readr, read_csv)
+#'  @importFrom dplyr tbl_df
+#'  @importFrom readr read_csv
 #'
 #' @param filename string is used to read the file. This parameter takes the output of
 #'  make_filename function. Although the filename can be created as a string input
@@ -61,7 +61,8 @@ make_filename <- function(year) {
 #'  year based on the parameters passed into the function. This function uses *make_filename*
 #'  function as well as mutate and select functions from the dplyr package.
 #'
-#'  @importFrom (dplyr, mutate, select)
+#'  @importFrom dplyr mutate
+#'  @importFrom dplyr select
 #'
 #' @param years (in numerical format, YYYY) can be a single or multiple years and
 #'  this value must be supplied as four digit integer value. This parameter will be used to generate list(s) of month-year. Error will
@@ -97,8 +98,10 @@ fars_read_years <- function(years) {
 #'  as well as group_by and summarize functions from *dplyr* package. Additionally,
 #'  function requires tidyr pacakge to utilize spread function.
 #'
-#' @importFrom (dplyr, bind_rows, group_by, summarize)
-#' @importFrom (tidyr, spread)
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarize
+#' @importFrom tidyr spread
 #'
 #' @param years (numerical, YYYY) can be a single year or multiple years.
 #'  Error will result if no-numeric value is passed into the function.
@@ -127,9 +130,9 @@ fars_summarize_years <- function(years) {
 #'  make_filename and fars_read functions. It also requires *dplyr*, *maps*, and *graphics*
 #'  packages to use filter, map, and points functions, respectively.
 #'
-#'  @importFrom (dplyr, filter)
-#'  @importFrom (maps, map)
-#'  @importFrom (graphics, points)
+#'  @importFrom dplyr filter
+#'  @importFrom maps map
+#'  @importFrom graphics points
 #'
 #' @param (numeric, state.num, year) state.num is an integer value that represents
 #'  a spefic state and the year is the year of interest in mapping the incidents.

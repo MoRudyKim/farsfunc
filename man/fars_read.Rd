@@ -22,8 +22,8 @@ output of this function is a dataframe and S3 class tbl_df from
  and S3 class "tbl_df" from dplyr package.
 }
 \details{
-@importFrom (dplyr, tbl_df)
- @importFrom (readr, read_csv)
+@importFrom dplyr tbl_df
+ @importFrom readr read_csv
 }
 \examples{
 \dontrun {

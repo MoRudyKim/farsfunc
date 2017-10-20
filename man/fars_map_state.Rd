@@ -30,7 +30,7 @@ fars_map_state(state.num, year)
  packages to use filter, map, and points functions, respectively.
 }
 \details{
-@importFrom (dplyr, filter)
- @importFrom (maps, map)
- @importFrom (graphics, points)
+@importFrom dplyr filter
+ @importFrom maps map
+ @importFrom graphics points
 }

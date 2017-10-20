@@ -21,10 +21,6 @@ output of this function is a dataframe and S3 class tbl_df from
  supplied in the parameter), reads the file, and loads the file as a data frame
  and S3 class "tbl_df" from dplyr package.
 }
-\details{
-@importFrom dplyr tbl_df
- @importFrom readr read_csv
-}
 \examples{
 \dontrun {
  fars_read(filename) ## Where filename is an output from make_filename function

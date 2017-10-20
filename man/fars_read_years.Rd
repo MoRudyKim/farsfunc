@@ -19,10 +19,6 @@ The function will return a list or lists of month-year (<int><dbl>).
  year based on the parameters passed into the function. This function uses *make_filename*
  function as well as mutate and select functions from the dplyr package.
 }
-\details{
-@importFrom dplyr mutate
- @importFrom dplyr select
-}
 \examples{
 \dontrun {
  fars_read_years(2013)

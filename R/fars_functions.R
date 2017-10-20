@@ -71,8 +71,7 @@ make_filename <- function(year) {
 #'
 #' @examples \dontrun {
 #'  fars_read_years(2013)
-#'  fars_read_years(c(2013,2014)) ## multiple year input can be passed in as a
-#'  vector.
+#'  fars_read_years(c(2013,2014))
 #' }
 #' @export
 fars_read_years <- function(years) {
@@ -109,8 +108,7 @@ fars_read_years <- function(years) {
 #'
 #' @examples \dontrun {
 #'  fars_summarize_years(2013)
-#'  fars_summarize_years(c(2013,2014)) ## multiple years can be passed in as
-#'  a vector.
+#'  fars_summarize_years(c(2013,2014))
 #' }
 #' @export
 fars_summarize_years <- function(years) {

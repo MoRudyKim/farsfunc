@@ -24,7 +24,6 @@ function will return the number of incidents per month for the
 \examples{
 \dontrun {
  fars_summarize_years(2013)
- fars_summarize_years(c(2013,2014)) ## multiple years can be passed in as
- a vector.
+ fars_summarize_years(c(2013,2014))
 }
 }

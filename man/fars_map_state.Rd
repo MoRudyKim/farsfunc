@@ -27,10 +27,10 @@ fars_map_state(state.num, year)
 @return function will return a map in a graphical form with incidents represented
  in a particular state based on locational information specified in FARS.
 
-@examples \dontrun {
+@examples
  fars_map_state(1, 2013)
  fars_map_state(20, 2014)
  fars_map_state(90, year)
- }
- @export
+
+@export
 }

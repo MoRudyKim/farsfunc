@@ -24,8 +24,7 @@ fars_summarize_years(years)
 @return function will return the number of incidents per month for the
  given year(s).
 
-@examples \dontrun {
+@examples
  fars_summarize_years(2013)
  fars_summarize_years(c(2013,2014))
-}
 }

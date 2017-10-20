@@ -14,10 +14,10 @@
 #'  @return output of this function is a dataframe and S3 class tbl_df from
 #'  dplyr package.
 #'
-#'  @examples \dontrun {
+#'  @examples
 #'  fars_read(filename) ## Where filename is an output from make_filename function
 #'  fars_read(2013) ## will cause an error
-#'  }
+#'
 #'
 #'  @export
 fars_read <- function(filename) {
@@ -42,11 +42,11 @@ fars_read <- function(filename) {
 #'  @return The function will return a file name with the year value embedded
 #'  in the file name to be decompressed.
 #'
-#'  @examples \dontrun {
+#'  @examples
 #'  make_filename(2013)
 #'  make_filename(2014)
 #'  make_filename("year") ## non-numeric parameter will cause an error
-#'  }
+#'
 #'  @export
 make_filename <- function(year) {
         year <- as.integer(year)
@@ -69,10 +69,10 @@ make_filename <- function(year) {
 #'
 #'  @return The function will return a list or lists of month-year (<int><dbl>).
 #'
-#'  @examples \dontrun {
+#'  @examples
 #'  fars_read_years(2013)
 #'  fars_read_years(c(2013,2014))
-#' }
+#'
 #' @export
 fars_read_years <- function(years) {
         lapply(years, function(year) {
@@ -106,10 +106,10 @@ fars_read_years <- function(years) {
 #'  @return function will return the number of incidents per month for the
 #'  given year(s).
 #'
-#'  @examples \dontrun {
+#'  @examples
 #'  fars_summarize_years(2013)
 #'  fars_summarize_years(c(2013,2014))
-#' }
+#'
 #' @export
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
@@ -140,11 +140,11 @@ fars_summarize_years <- function(years) {
 #'  @return function will return a map in a graphical form with incidents represented
 #'  in a particular state based on locational information specified in FARS.
 #'
-#'  @examples \dontrun {
+#'  @examples
 #'  fars_map_state(1, 2013)
 #'  fars_map_state(20, 2014)
 #'  fars_map_state(90, year)
-#'  }
+#'
 #'  @export
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)

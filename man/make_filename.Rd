@@ -19,10 +19,10 @@ make_filename(year)
 @return The function will return a file name with the year value embedded
  in the file name to be decompressed.
 
-@examples \dontrun {
+@examples
  make_filename(2013)
  make_filename(2014)
  make_filename("year") ## non-numeric parameter will cause an error
- }
- @export
+
+@export
 }

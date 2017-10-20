@@ -21,8 +21,7 @@ fars_read_years(years)
 
 @return The function will return a list or lists of month-year (<int><dbl>).
 
-@examples \dontrun {
+@examples
  fars_read_years(2013)
  fars_read_years(c(2013,2014))
-}
 }

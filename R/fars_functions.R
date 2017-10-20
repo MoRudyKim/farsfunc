@@ -4,22 +4,22 @@
 #'  supplied in the parameter), reads the file, and loads the file as a data frame
 #'  and S3 class "tbl_df" from dplyr package.
 #'
-#' @importFrom readr read_csv
+#'  @importFrom readr read_csv
 #'
-#' @param filename string is used to read the file. This parameter takes the output of
+#'  @param filename string is used to read the file. This parameter takes the output of
 #'  make_filename function. Although the filename can be created as a string input
 #'  into the function as a parameter, any mis-spelled component or mis-specified
 #'  filename will result in an error.
 #'
-#' @return output of this function is a dataframe and S3 class tbl_df from
+#'  @return output of this function is a dataframe and S3 class tbl_df from
 #'  dplyr package.
 #'
-#' @example \dontrun {
+#'  @examples \dontrun {
 #'  fars_read(filename) ## Where filename is an output from make_filename function
 #'  fars_read(2013) ## will cause an error
 #'  }
 #'
-#' @export
+#'  @export
 fars_read <- function(filename) {
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
@@ -35,19 +35,19 @@ fars_read <- function(filename) {
 #'  files come in a compressed format with "accident_YYYY_.csv.bz2" The function preserves
 #'  the naming convention but differentiates the file with the "year" of the data.
 #'
-#' @param year (in numerical format, YYYY) which will be used
+#'  @param year (in numerical format, YYYY) which will be used
 #'  to name the file.If the parameter is not a numerical value representing a four digit year, the
 #'  function will return an error message if non-numeric values entered.
 #'
-#' @return The function will return a file name with the year value embedded
+#'  @return The function will return a file name with the year value embedded
 #'  in the file name to be decompressed.
 #'
-#' @examples \dontrun {
+#'  @examples \dontrun {
 #'  make_filename(2013)
 #'  make_filename(2014)
 #'  make_filename("year") ## non-numeric parameter will cause an error
 #'  }
-#' @export
+#'  @export
 make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)
@@ -60,16 +60,16 @@ make_filename <- function(year) {
 #'  year based on the parameters passed into the function. This function uses *make_filename*
 #'  function as well as mutate and select functions from the dplyr package.
 #'
-#' @importFrom dplyr mutate select
-#' @importFrom magrittr %>%
+#'  @importFrom dplyr mutate select
+#'  @importFrom magrittr %>%
 #'
-#' @param years (in numerical format, YYYY) can be a single or multiple years and
+#'  @param years (in numerical format, YYYY) can be a single or multiple years and
 #'  this value must be supplied as four digit integer value. This parameter will be used to generate list(s) of month-year. Error will
 #'  result if non-numerical parameter is passed into the function
 #'
-#' @return The function will return a list or lists of month-year (<int><dbl>).
+#'  @return The function will return a list or lists of month-year (<int><dbl>).
 #'
-#' @examples \dontrun {
+#'  @examples \dontrun {
 #'  fars_read_years(2013)
 #'  fars_read_years(c(2013,2014))
 #' }
@@ -96,17 +96,17 @@ fars_read_years <- function(years) {
 #'  as well as group_by and summarize functions from *dplyr* package. Additionally,
 #'  function requires tidyr pacakge to utilize spread function.
 #'
-#' @importFrom dplyr group_by summarize
-#' @importFrom tidyr spread
-#' @importFrom magrittr %>%
+#'  @importFrom dplyr group_by summarize
+#'  @importFrom tidyr spread
+#'  @importFrom magrittr %>%
 #'
-#' @param years (numerical, YYYY) can be a single year or multiple years.
+#'  @param years (numerical, YYYY) can be a single year or multiple years.
 #'  Error will result if no-numeric value is passed into the function.
 #'
-#' @return function will return the number of incidents per month for the
+#'  @return function will return the number of incidents per month for the
 #'  given year(s).
 #'
-#' @examples \dontrun {
+#'  @examples \dontrun {
 #'  fars_summarize_years(2013)
 #'  fars_summarize_years(c(2013,2014))
 #' }
@@ -126,15 +126,16 @@ fars_summarize_years <- function(years) {
 #'  make_filename and fars_read functions. It also requires *dplyr*, *maps*, and *graphics*
 #'  packages to use filter, map, and points functions, respectively.
 #'
-#' @importFrom dplyr filter
-#' @importFrom maps map
-#' @importFrom graphics points
-#' @importFrom magrittr %>%
+#'  @importFrom dplyr filter
+#'  @importFrom maps map
+#'  @importFrom graphics points
+#'  @importFrom magrittr %>%
 #'
-#' @param (numeric, state.num, year) state.num is an integer value that represents
+#'  @param state.num (numeric, state.num, year) state.num is an integer value that represents
 #'  a spefic state and the year is the year of interest in mapping the incidents.
 #'  state.num value in the FARS range from 1 to 56. Integer value outside this
-#'  range will result in an error. year must be four digit year integer value.
+#'  range will result in an error.
+#'  @param year must be four digit year integer value.
 #'
 #'  @return function will return a map in a graphical form with incidents represented
 #'  in a particular state based on locational information specified in FARS.

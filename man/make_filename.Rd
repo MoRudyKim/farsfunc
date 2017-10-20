@@ -22,7 +22,6 @@ make_filename(year)
 @examples
  make_filename(2013)
  make_filename(2014)
- make_filename("year") ## non-numeric parameter will cause an error
 
 @export
 }

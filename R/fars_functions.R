@@ -15,7 +15,7 @@
 #'  dplyr package.
 #'
 #'  @examples
-#'  fars_read(filename) ## Where filename is an output from make_filename function
+#'  fars_read("accident_2013.csv") ## Where filename is an output from make_filename function
 #'  fars_read(2013) ## will cause an error
 #'
 #'
@@ -45,7 +45,6 @@ fars_read <- function(filename) {
 #'  @examples
 #'  make_filename(2013)
 #'  make_filename(2014)
-#'  make_filename("year") ## non-numeric parameter will cause an error
 #'
 #'  @export
 make_filename <- function(year) {
@@ -143,7 +142,7 @@ fars_summarize_years <- function(years) {
 #'  @examples
 #'  fars_map_state(1, 2013)
 #'  fars_map_state(20, 2014)
-#'  fars_map_state(90, year)
+#'  fars_map_state(50, 2015)
 #'
 #'  @export
 fars_map_state <- function(state.num, year) {

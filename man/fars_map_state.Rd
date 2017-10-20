@@ -30,7 +30,7 @@ fars_map_state(state.num, year)
 @examples
  fars_map_state(1, 2013)
  fars_map_state(20, 2014)
- fars_map_state(90, year)
+ fars_map_state(50, 2015)
 
 @export
 }

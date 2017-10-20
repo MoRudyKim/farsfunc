@@ -23,7 +23,7 @@ fars_read(filename)
  dplyr package.
 
 @examples
- fars_read(filename) ## Where filename is an output from make_filename function
+ fars_read("accident_2013.csv") ## Where filename is an output from make_filename function
  fars_read(2013) ## will cause an error
 
 @export

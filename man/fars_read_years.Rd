@@ -6,22 +6,23 @@
 \usage{
 fars_read_years(years)
 }
+\arguments{
+\item{years}{Numerical values which can be a single or multiple years and
+this value must be supplied as four digit integer value. This parameter will be used to generate list(s) of month-year. Error will
+result if non-numerical parameter is passed into the function}
+}
+\value{
+The function will return a list or lists of month-year (<int><dbl>).
+}
 \description{
-\code{fars_read_years} is a support function that creates list(s) of month-
+\code{fars_read_years(years)} is a support function that creates list(s) of month-
  year based on the parameters passed into the function. This function uses *make_filename*
  function as well as mutate and select functions from the dplyr package.
 }
-\details{
-@importFrom dplyr mutate select
- @importFrom magrittr %>%
-
-@param years (in numerical format, YYYY) can be a single or multiple years and
- this value must be supplied as four digit integer value. This parameter will be used to generate list(s) of month-year. Error will
- result if non-numerical parameter is passed into the function
-
-@return The function will return a list or lists of month-year (<int><dbl>).
-
-@examples
+\examples{
+\dontrun{
  fars_read_years(2013)
  fars_read_years(c(2013,2014))
+ }
+
 }

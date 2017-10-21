@@ -6,25 +6,18 @@
 \usage{
 fars_read(filename)
 }
+\arguments{
+\item{filename}{String characters used to read the file. This parameter takes the output of
+make_filename function. Although the filename can be created as a string input
+into the function as a parameter, any mis-spelled component or mis-specified
+filename will result in an error.}
+}
+\value{
+output of this function is a dataframe and S3 class tbl_df from
+ dplyr package.
+}
 \description{
-\code{fars_read} checks the existence of the file (based on the filename
+\code{fars_read(filename)} checks the existence of the file (based on the filename
  supplied in the parameter), reads the file, and loads the file as a data frame
  and S3 class "tbl_df" from dplyr package.
-}
-\details{
-@importFrom readr read_csv
-
-@param filename string is used to read the file. This parameter takes the output of
- make_filename function. Although the filename can be created as a string input
- into the function as a parameter, any mis-spelled component or mis-specified
- filename will result in an error.
-
-@return output of this function is a dataframe and S3 class tbl_df from
- dplyr package.
-
-@examples
- fars_read("accident_2013.csv") ## Where filename is an output from make_filename function
- fars_read(2013) ## will cause an error
-
-@export
 }

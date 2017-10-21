@@ -6,22 +6,24 @@
 \usage{
 make_filename(year)
 }
+\arguments{
+\item{year}{Numerical value which will be used
+to name the file.If the parameter is not a numerical value representing a four digit year, the
+function will return an error message if non-numeric values entered.}
+}
+\value{
+The function will return a file name with the year value embedded
+ in the file name to be decompressed.
+}
 \description{
-\code{make_filename} is a simple function to create file names for the data files. Fatality accident
+\code{make_filename(year)} is a simple function to create file names for the data files. Fatality accident
  files come in a compressed format with "accident_YYYY_.csv.bz2" The function preserves
  the naming convention but differentiates the file with the "year" of the data.
 }
-\details{
-@param year (in numerical format, YYYY) which will be used
- to name the file.If the parameter is not a numerical value representing a four digit year, the
- function will return an error message if non-numeric values entered.
-
-@return The function will return a file name with the year value embedded
- in the file name to be decompressed.
-
-@examples
+\examples{
+\dontrun{
  make_filename(2013)
  make_filename(2014)
+ }
 
-@export
 }

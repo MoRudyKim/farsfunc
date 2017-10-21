@@ -6,25 +6,25 @@
 \usage{
 fars_summarize_years(years)
 }
+\arguments{
+\item{years}{Numerical values which can be a single year or multiple years.
+Error will result if no-numeric value is passed into the function.}
+}
+\value{
+function will return the number of incidents per month for the
+ given year(s).
+}
 \description{
-\code{fars_summarize_years} takes the year or years in as a parameter and
+\code{fars_summarize_years(years)} takes the year or years in as a parameter and
  creates a dplyr style table (tibble) that counts the number of incidents
  per month for the given year. This function uses fars_read_years function
  as well as group_by and summarize functions from *dplyr* package. Additionally,
  function requires tidyr pacakge to utilize spread function.
 }
-\details{
-@importFrom dplyr group_by summarize
- @importFrom tidyr spread
- @importFrom magrittr %>%
-
-@param years (numerical, YYYY) can be a single year or multiple years.
- Error will result if no-numeric value is passed into the function.
-
-@return function will return the number of incidents per month for the
- given year(s).
-
-@examples
+\examples{
+\dontrun{
  fars_summarize_years(2013)
  fars_summarize_years(c(2013,2014))
+ }
+
 }

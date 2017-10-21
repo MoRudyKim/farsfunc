@@ -20,4 +20,4 @@ Imports: readr,
     tidyr,
     maps,
     graphics,
-    utils
+    tibble

@@ -81,9 +81,11 @@ fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)
                 tryCatch({
+                        year <- NULL
+                        MONTH <- NULL
                         dat <- fars_read(file)
                         dplyr::mutate_(dat, year = year) %>%
-                                dplyr::select_(MONTH, year)
+                        dplyr::select_(MONTH, year)
                 }, error = function(e) {
                         warning("invalid year: ", year)
                         return(NULL)
@@ -118,6 +120,9 @@ fars_read_years <- function(years) {
 #' @export
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
+        year <- NULL
+        MONTH <- NULL
+        n <- NULL
         dplyr::bind_rows(dat_list) %>%
                 dplyr::group_by_(year, MONTH) %>%
                 dplyr::summarize_(n = n()) %>%
@@ -158,6 +163,7 @@ fars_map_state <- function(state.num, year) {
         data <- fars_read(filename)
         state.num <- as.integer(state.num)
 
+        STATE <- NULL
         if(!(state.num %in% unique(data$STATE)))
                 stop("invalid STATE number: ", state.num)
         data.sub <- dplyr::filter_(data, STATE == state.num)

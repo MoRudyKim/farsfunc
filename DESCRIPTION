@@ -19,4 +19,5 @@ Imports: readr,
     magrittr,
     tidyr,
     maps,
-    graphics
+    graphics,
+    utils
